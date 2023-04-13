@@ -33,7 +33,7 @@ public class AccountController {
         messageDto.setSubject("Subject");
         messageDto.setContent("Content");
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             kafkaTemplate.send("notification", messageDto).addCallback(new KafkaSendCallback<String, Object>() {
                 @Override
                 public void onSuccess(SendResult<String, Object> result) {
