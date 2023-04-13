@@ -13,14 +13,14 @@ public class ProducerApplication {
     }
 
     @Bean
-    NewTopic notification() {
+    NewTopic vip() {
         // topic name, partitionNumber, replicationNumber
-        return new NewTopic("notification", 2 , (short) 1);
+        return new NewTopic("vip", 2 , (short) 1);
     }
 
     @Bean
-    NewTopic statistic() {
+    NewTopic normal() {
         // topic name, partitionNumber, replicationNumber
-        return new NewTopic("statistic", 2 , (short) 1);
+        return new NewTopic("normal", 2 , (short) 1);
     }
 }
